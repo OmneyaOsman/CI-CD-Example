@@ -8,7 +8,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -32,7 +31,7 @@ class MainActivity : ComponentActivity() {
             application, "aba66190-e29c-408b-ac89-0250763278d7",
             Analytics::class.java, Crashes::class.java
         )
-        AppCenter.setLogLevel(Log.VERBOSE);
+        AppCenter.setLogLevel(Log.VERBOSE)
         enableEdgeToEdge()
         setContent {
             CICDExampleTheme {
@@ -55,7 +54,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         Text(
             text = "Hello Hello $name!",
             modifier = modifier.clickable {
-                Analytics.trackEvent("My custom event");
+                Analytics.trackEvent("My custom event")
                 //            Crashes.generateTestCrash()
                 //            throw Exception("noo")
             }
