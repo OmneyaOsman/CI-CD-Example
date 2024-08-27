@@ -11,11 +11,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 import com.omneya.ci_cd_example.ui.theme.CICDExampleTheme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCenter.start(
+            application, "aba66190-e29c-408b-ac89-0250763278d7",
+            Analytics::class.java, Crashes::class.java
+        )
         enableEdgeToEdge()
         setContent {
             CICDExampleTheme {

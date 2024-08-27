@@ -50,6 +50,8 @@ android {
 }
 
 dependencies {
+    implementation (libs.appcenter.analytics)
+    implementation (libs.appcenter.crashes)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
